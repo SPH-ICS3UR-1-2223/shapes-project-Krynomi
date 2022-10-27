@@ -1,35 +1,47 @@
 package shapes;
 
 public class Rectangle {
-	//fields
+	// fields
 	private double length;
 	private double width;
 	private double area;
 	private double perimeter;
-	
-	//methods
+
+	// methods
 	public Rectangle() {
-		
+		this.length = 1;
+		this.width = 1;
+		this.perimeter = findPerimeter();
+		this.area = findArea();
 	}
-	
+
 	public Rectangle(double side) {
-		
+		this.length = side;
+		this.width = 1;
+		this.perimeter = findPerimeter();
+		this.area = findArea();
 	}
-	
+
 	public Rectangle(double length, double width) {
-		
+		this.length = length;
+		this.width = width;
+		this.perimeter = findPerimeter();
+		this.area = findArea();
 	}
-	
+
 	private double findPerimeter() {
-		return 0;
+		return length+length+width+width;
 	}
-	
+
 	private double findArea() {
-		return 0;
+		return length*area;
 	}
-	
+
 	public void printStats() {
-		
+		System.out.println("Rectangle");
+		System.out.println("Width =" + this.width);
+		System.out.println("Length =" + this.length);
+		System.out.println("Area =" + this.area);
 	}
 
 	public double getLength() {
@@ -55,6 +67,5 @@ public class Rectangle {
 	public double getPerimeter() {
 		return perimeter;
 	}
-	
-	
+
 }
